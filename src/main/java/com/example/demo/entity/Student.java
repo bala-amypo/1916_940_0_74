@@ -5,8 +5,7 @@ public class Student {
     private int id;
     private String name;
     private String email;
-    private LocalDate dob;
-    private float cgpa;
+   
     public int getId() {
         return id;
     }
