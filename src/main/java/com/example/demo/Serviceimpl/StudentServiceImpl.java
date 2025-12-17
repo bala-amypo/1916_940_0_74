@@ -10,7 +10,7 @@ public StudentServiceImpl(StudentRepository studentRepository) {
     this.studentRepository = studentRepository;
 }
 public Student saveStudent(Student student) {
-    return student;
+    return studentRepository.save(student);
 }
 
     
