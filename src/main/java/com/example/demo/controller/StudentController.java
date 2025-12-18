@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
-
+import jakarta.validation.Valid;
 @RestController
 public class StudentController {
     @Autowired
@@ -15,7 +15,7 @@ public class StudentController {
 
     @PostMapping("/postdata")
     public Student postdata(@RequestBody Student student){
-        return studentService.saveStudent(student);
+        return new ResponseEntity<>  studentService.saveStudent(student),HttpStatus.CREATED;
     }
     
     
